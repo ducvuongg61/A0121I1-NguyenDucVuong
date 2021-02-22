@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d4b2acd-c627-43af-bcae-901894e0c74c" name="Default Changelist" comment="" />
+    <list default="true" id="5d4b2acd-c627-43af-bcae-901894e0c74c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/4.GibHub &amp; HTML/Bai Tap/BTTaoDanhSach.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +24,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/4.GibHub &amp; HTML" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -35,10 +40,17 @@
       <workItem from="1611579563993" duration="91000" />
       <workItem from="1611579665573" duration="67000" />
       <workItem from="1611812791721" duration="21000" />
+      <workItem from="1612188381950" duration="73000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="188" key="FileChooserDialogImpl" timestamp="1612188406834">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="188" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1612188406834" />
   </component>
 </project>

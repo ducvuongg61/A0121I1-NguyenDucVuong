@@ -1,0 +1,25 @@
+body {
+    padding : 50px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+thead {
+    color: blue;
+}
+tbody {
+    border: 1px solid black;
+    border-color: black;
+}
+th , td {
+    padding : 10px;
+}
+th {
+    border: 1px solid black;
+    background-color: yellow;
+}
+td {
+    border: 1px solid black;
+}
+
