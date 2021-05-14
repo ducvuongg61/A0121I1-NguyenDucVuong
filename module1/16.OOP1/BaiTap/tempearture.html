@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Temperature  = function(doC){
+            this.doC = doC;
+            
+            this.getDoC = function(){
+                return this.doC;
+            }
+
+            this.getDoF = function(){
+                return (9/5)* (doC) + 32;
+            }
+
+            this.getDoK = function(){
+                return (doC) + 273.15;
+            }
+        };
+
+        let temp = new Temperature(25);
+        let doF = temp.getDoF();
+        let doK = temp.getDoK();
+
+        alert("Do F = : " + doF + " ; Do K : " + doK);
+    </script>
+</body>
+</html>

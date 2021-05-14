@@ -1,0 +1,19 @@
+body{
+    padding :5px;
+}
+table {
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+th{
+    padding: 10px;
+}
+td{
+    font-size: 10px;
+    padding: 5px;
+}
+button {
+    color: blue;
+    width: 30px;
+    background-color: white;
+}

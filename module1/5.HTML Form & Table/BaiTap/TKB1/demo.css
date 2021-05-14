@@ -1,25 +1,14 @@
 body {
-    padding : 50px;
+    padding: 20px;
 }
 table {
-    width: 100%;
     border-collapse: collapse;
+    padding: 20px;
+    width: 100%;
 }
-thead {
+#t1{
+    border: 1px solid black;
+}
+#t2{
     color: blue;
 }
-tbody {
-    border: 1px solid black;
-    border-color: black;
-}
-th , td {
-    padding : 10px;
-}
-th {
-    border: 1px solid black;
-    background-color: yellow;
-}
-td {
-    border: 1px solid black;
-}
-

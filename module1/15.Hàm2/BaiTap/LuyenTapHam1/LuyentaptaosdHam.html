@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Bai1</td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" onclick="alertMessenger();">Call</button>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+
+    <table>
+        <tr>
+            <th>Bai2</th>
+        </tr>
+        <tr>
+            <td><input type="text" name="" id="a"></td>
+            <td><button type="submit" onclick="tang();">Increase</button></td>
+        </tr>
+        <tr>
+            <td>Gia tri tang 1 : </td>
+            <td colspan="2"><div id="result1"></div></td>
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+    <br>
+
+    <table>
+        <tr>
+            <th>Bai3</th>
+        </tr>
+        <tr>
+            <td>Nhap so thu 1 : </td>
+            <td><input type="text" name="" id="so1"></td>
+        </tr>
+        <tr>
+            <td>Nhap so thu 2 : </td>
+            <td><input type="text" name="" id="so2"></td>
+            <td><button type="submit" onclick="bai3();">Calc</button></td>
+        </tr>
+        <tr>
+            <td>Thong Bao: </td>
+            <td colspan="3"><div id="result3"></div></td>
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+    <br>
+
+    <table>
+        <tr>
+            <th>Bai5</th>
+        </tr>
+        <tr>
+            <td><input type="text" name="" id="string"></td>
+            <td><button type="submit" onclick="bai5();">Find</button></td>
+        </tr>
+        <tr>
+            <td>Ket Qua : </td>
+            <td colspan="2"><div id="result5"></div></td>
+        </tr>
+    </table>
+
+    <script>
+        function alertMessenger(){
+            alert("Xin Chao!");
+        }
+
+        function tang(){
+            let a = document.getElementById("a").value;
+            let div = document.getElementById("result1");
+            a++;
+            div.innerHTML = a;
+        }
+
+        function bai3(){
+            var so1 = document.getElementById('so1').value;
+            var so2 = document.getElementById('so2').value;
+            var div = document.getElementById('result3');
+            var sum = parseInt(so1) + parseInt(so2);
+            if(so1 > so2){
+                div.innerHTML = "So thu 1 lon hon so thu 2";
+            } else {
+                div.innerHTML = "Tong cua 2 so la : " + sum;
+            }
+        }
+
+        function addNumbers() {
+            firstNum = 4;
+            secondNum = 8;
+            result = firstNum + secondNum;
+            return result;
+        }
+        
+        result = 0;
+        alert("Gia tri result truoc " + result);
+        result = addNumbers(); 
+        alert("Gia tri result sau " + result);
+
+    //     let actor = ['Polaris','Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' , 'Regulus'];
+    //     let star = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major' , 'Leo'];
+    //     let b = ['Polaris'];
+    //     function bai5(){
+    //         var string = document.getElementById("string");
+    //         var div = document.getElementById("result5");
+    //         var temp = false;
+    //         for(let i = 0 ; i < actor.length ; i++){
+    //             for(let j = 0 ; i < star.length ; j++){
+    //                 if(b[0] === actor[i]){
+    //                     div.innerHTML = 
+    //                 }
+    //         }
+    //     }
+    // }
+    </script>
+</body>
+</html>

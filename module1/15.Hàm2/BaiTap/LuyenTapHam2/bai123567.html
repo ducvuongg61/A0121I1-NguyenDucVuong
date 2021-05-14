@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th{
+            text-align: left;
+        }
+        td{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <th>Bai1</th>
+        <tr>
+            <th>Binh Phuong : </th>
+            <th><input type="text" name="" id="soa"></th>
+            <th><button type="submit" onclick="bai1();">Calc</button></th>
+        </tr>
+        <tr>
+            <td style="text-align: right;">Ket Qua : </td>
+            <td colspan="2"> <div id="result"></div></td>
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+
+    <table>
+        <tr>
+            <th>Bai2</th>
+        </tr>
+        <tr>
+            <td>Nhap r : </td>
+            <td><input type="text" name="" id="r"></td>
+            <td><button type="submit" onclick="bai2();">Calc</button></td>
+        </tr>
+        <tr>
+            <td style="top: 0px;">Chu vi : </td>
+            <td colspan="2"> <div id="result2"></div></td>
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+
+    <table>
+        <tr>
+            <th>Bai3</th>
+        </tr>
+        <tr>
+            <td>Nhap so nguyen : </td>
+            <td><input type="text" name="" id="soNguyen"></td>
+            <td><button type="submit" onclick="bai3();">Calc</button></td>
+        </tr>
+        <tr>
+            <td>Ket qua : </td>
+            <td colspan="2"><div id="result3"></div></td>
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+
+    <table>
+        <tr>
+            <th>Bai4</th>
+        </tr>
+        <tr>
+            <td>Moi nhap : </td>
+            <td><input type="text" name="" id="nhap"></td>
+            <td><button type="submit" onclick="bai4();">Check</button></td>
+        </tr>
+        <tr>
+            <td>Ket qua : </td>
+            <td colspan="2"> <div id="result4"></div></td>
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+
+    <table>
+        <tr>
+            <th>Bai5</th>
+        </tr>
+        <tr>
+            <td>Nhap a : </td>
+            <td><input type="text" name="" id="soA"></td>
+        </tr>
+        <tr>
+            <td>Nhap b : </td>
+            <td><input type="text" name="" id="soB"></td>
+        </tr>
+        <tr>
+            <td>Nhap c : </td>
+            <td><input type="text" name="" id="soC"></td>
+            <td><button type="submit" onclick="bai5();">Check</button></td>
+        </tr>
+        <tr>
+            <td>So nho nhat la : </td>
+            <td colspan="2"> <div id="result5"></div></td>
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+
+    <table>
+        <tr>
+            <th>Bai6</th>
+        </tr>
+        <tr>
+            <td>Nhap so nguyen duong : </td>
+            <td><input type="text" name="" id="soDuong"></td>
+            <td><button type="submit" onclick="bai6();">Check</button></td>
+        </tr>
+        <tr>
+            <td>Ket qua : </td>
+            <td colspan="2"> <div id="result6"></div></td>
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+    <table>
+        <tr>
+            <th>Bai7</th>
+        </tr>
+        <tr>
+            <td>Nhap a : </td>
+            <td><input type="text" name="" id="so1"></td>
+        </tr>
+        <tr>
+            <td>Nhap b : </td>
+            <td><input type="text" name="" id="so2"></td>
+            <td><button type="submit" onclick="bai7();">Change</button></td>
+        </tr>
+        <tr>
+            <td>Ket qua : </td>
+            <td colspan="2"> <div id="result7"></div></td>
+        </tr>
+    </table>
+    <script>
+        function bai1(){
+            let soa = document.getElementById('soa').value;
+            let div = document.getElementById('result');
+            let binhphuong = (soa) * (soa);
+            div.innerHTML = binhphuong;
+        }
+
+        function bai2(){
+            let r = document.getElementById('r').value;
+            let div = document.getElementById('result2');
+            let PI = 3.14;
+            let C = 2 * PI * r;
+            let S = (r*r) * 3.14;
+            div.innerHTML = "Chu vi hinh tron la : " + C + "<br/>" + "Dien tich hinh tron la : " + S;
+        }
+
+        function bai3(){
+            let soNguyen = document.getElementById('soNguyen').value;
+            let div = document.getElementById('result3');
+            let giaithua = 1;
+            for(let i = 1 ; i <= soNguyen ; i++){
+                giaithua *= i;
+            }            
+            div.innerHTML = giaithua;
+        }
+
+        function bai4(){
+            let nhap =  document.getElementById('nhap').value;
+            let div = document.getElementById('result4');
+            if(isNaN(nhap)){
+                div.innerHTML = nhap + " khong phai la ky tu so.";
+            } else {
+                div.innerHTML = nhap + " la ky tu so.";
+            }
+        }
+
+        function bai5(){
+            let soA = document.getElementById('soA').value;
+            let soB = document.getElementById('soB').value;
+            let soC = document.getElementById('soC').value;
+            let div = document.getElementById('result5');
+            if(soA < soB && soA < soC){
+                div.innerHTML =  soA;
+            } else if(soB < soA && soB < soC){
+                div.innerHTML =  soB;
+            } else if(soC < soA && soC < soB){
+                div.innerHTML =  soC;
+            }
+        }
+
+        function bai6(){
+            let soDuong = document.getElementById('soDuong').value;
+            let div = document.getElementById('result6');
+            if(soDuong > 0){
+                div.innerHTML = "True";
+            } else {
+                div.innerHTML = "False";
+            }
+        }
+
+        function bai7(){
+            let so1 =  document.getElementById('so1').value;
+            let so2 =  document.getElementById('so2').value;
+            let div = document.getElementById('result7');
+            let temp = 0;
+            temp = so1;
+            so1 =so2;
+            so2 = temp;
+            div.innerHTML = "a = " + so1 + "b = " + so2;
+        }
+    </script>
+</body>
+</html>

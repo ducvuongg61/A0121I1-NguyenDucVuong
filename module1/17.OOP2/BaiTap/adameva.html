@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Human{
+            constructor (name, gender , weight){
+                this.name = name;
+                this.gender = gender;
+                this.weight = weight;
+            }
+
+            isMale(){
+                if(this.gender == "Male"){
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+
+            setGender(gender){
+                this.gender = gender;
+            }
+
+            checkApple(Apple){
+                if(Apple.isEmpty()){
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+
+            eat(Apple){
+                this.weight++;
+                Apple.decrease();
+            }
+
+            say(String){
+                alert("Human say");
+            }
+
+            getName(){
+                return this.name;
+            }
+
+            setName(){
+                this.name = name;
+            }
+
+            getWeight(){
+                return this.weight;
+            }
+
+            setWeight(){
+                this.weight = weight;
+            }
+
+        }
+
+        class Apple{
+            constructor(){
+                this.weight = 10;
+            }
+
+            decrease(){
+                this.weight++;
+            }
+
+            isEmpty(){
+                if(this.weight == 0){
+                    return true;
+                } else {
+                    false;
+                }
+            }
+
+            getWeight(){
+                return this.weight;
+            }
+        }
+
+        let a = new Human("Nguyen Duc Vuong" , "Male" , 65);
+        let b = new Apple();
+
+        alert("Name : " + a.getName() +"\n" + "Gender : " + a.gender + "\n" + "Weight : " + a.getWeight());
+        alert("Weight Apple : " + b.getWeight());
+        a.eat(b);
+        alert("Name : " + a.getName() +"\n" + "Gender : " + a.gender + "\n" + "Weight : " + a.getWeight());
+
+        
+    </script>
+</body>
+</html>

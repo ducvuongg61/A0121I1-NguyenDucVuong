@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="3"><h2>Temperature Converter</h2></td>
+        </tr>
+        <tr>
+            <td colspan="4"><p>Type a value in the Fahrenheit filed to convert the value to Celcius: </p></td>
+        </tr>
+        <tr>
+            <td>Fahrenheit : </td>
+            <td><input type="text" name="num" id="number"></td>
+            <td><button type="submit" onclick="bai2();">Click</button></td>
+        </tr>
+    </table>
+    <div id="result">Celcius : </div>
+
+    <script>
+        function bai2(){
+            let doF = document.getElementById("number").value;
+            var doC = parseFloat((doF - 32) / 1.8);
+            let div = document.getElementById("result");
+            div.innerHTML = doC + "C";
+        }
+    </script>
+</body>
+</html>

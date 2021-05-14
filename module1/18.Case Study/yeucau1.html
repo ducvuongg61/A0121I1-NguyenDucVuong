@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let name = prompt("Input name : ");
+        let cmnd = prompt("Input CMND : ");
+        let birthday = prompt("Input your birthday : ");
+        let email = prompt("Input your email : ");
+        let address = prompt("Input your address : ");
+        let typeService = prompt("Input your Type Service : (Villa, House, Room) ");
+        let typeRoom = prompt("Input your Type Room : (Vip, Business, Normal)");
+        let typeCustomer = prompt("Input your Customer : (Diamond, Platinum, Gold, Silver, Member)");
+        let discount = prompt("Input your discount : ");
+        let quanlityIncluded = prompt("Input your Quality Include : ");
+        let rentDays = prompt("Input your rent day : ");
+        let much;
+        if(typeService === "villa"){
+            much = 500;
+        }
+        if(typeService === "house"){
+            much = 300;
+        }
+        if(typeService === "room"){
+            much = 100;
+        } 
+        let totalPay = much * rentDays * ( 1 - (discount)/100);
+
+        alert("Name : " + name + "\n" +
+        "Identity Card : " + cmnd + "\n" + 
+        "Birthday : " + birthday + "\n" + 
+        "Email : " + email + "\n" +
+        "Address : " + address +  "\n" +
+        "Service : " + typeService +"\n" +
+        "Room : " + typeRoom + "\n" +
+        "Customer : " + typeCustomer + "\n" +
+        "Discount : " + discount + "\n" +
+        "Quality Include : " + quanlityIncluded + "\n" + 
+        "Rent Day : " + rentDays + "\n" +
+        "Total : " + totalPay
+        )
+    </script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="Customer.js"></script>
+</head>
+<body>
+    <script>
+        let regexEmail = /\S+@\S+\.\S+/;
+        let regexBirthday =/^\d{2}[./-]\d{2}[./-]\d{4}$/;
+        let regexCardID = /^[\d]{8,8}$/;
+        let regexInt = /^\d+$/;
+        let listCustomer = [];
+        function displayMainMenu(){
+            let choose = parseInt(prompt("1.Add new customer." + "\n" + "2.Display information customer." + "\n" +
+            "3.Edit information customer." + "\n" + "4.Delete Customer." + "\n" + "5.Display TotalPays." + "\n" + "6.Exit."));
+            switch(choose){
+                case 1 : 
+                    addNewCustomer();
+                    break;
+                case 2:
+                    displayCustomer();
+                    break;
+                case 3:
+                    editInfo();
+                    break;
+                case 4:
+                    deleteCustomer();
+                    break;
+                case 5:
+                    displayTotalPays();
+                    break;
+                case 6:
+                    break;
+                default:
+                    alert("Fail!");
+            }
+        }
+
+        function deleteCustomer(){
+            let temp = "";
+            for(let i = 0 ; i < listCustomer.length ; i++){
+                temp += i + " . Name : " + listCustomer[i].getName() + "\n";
+            }
+            let chooseDelete = parseInt(prompt(temp));
+            let check = parseInt(prompt("Are you want delete customer?" + "\n" + "1.Yes" + "\n" + "2.No"));
+            if(check === 1){
+                listCustomer.splice(chooseDelete,1);
+                alert("You deleted successful!")
+            } else {
+                alert("Cancel.");
+            } 
+            displayMainMenu();
+        }
+
+        function addNewCustomer(){
+            let checkValid = false;
+            let cus = new Customer();
+            let name = prompt("Input name : ");
+            let cardID;
+            let birthday;
+            let email;
+            let discount;
+            let qualityIncluded;
+            let rentDays;
+            do{
+                cardID = prompt("Input CardID : ");
+                if(regexCardID.test(cardID)){
+                    checkValid = true;
+                } else {
+                    alert("Error Credit Card ID!!!");
+                }
+            } while(!checkValid)
+
+            checkValid = false;
+
+            do{
+                birthday = prompt("Input your birthday : ");
+                if(regexBirthday.test(birthday)){
+                    checkValid = true;
+                } else {
+                    alert("Don't Birthday!")
+                }
+            } while(!checkValid)
+
+            checkValid = false;
+
+            do{
+                email = prompt("Input your email : ");
+                if(regexEmail.test(email)){
+                    checkValid = true;
+                } else {
+                    alert("Email not valid.!");
+                }
+            }
+            while(!checkValid);
+            let address = prompt("Input your address : ");
+            let typeService = prompt("Input your Type Service : (Villa, House, Room) ");
+            let typeRoom = prompt("Input your Type Room : (Vip, Business, Normal)");
+            let typeCustomer = prompt("Input your Customer : (Diamond, Platinum, Gold, Silver, Member)");
+
+            checkValid = false;
+
+            do{
+                discount = prompt("Input your discount : ");
+                if(regexInt.test(discount)){
+                    checkValid = true;
+                } else {
+                    alert("Not integer!");
+                }
+            } while(!checkValid);
+
+            checkValid = false;
+
+            do{
+                qualityIncluded = prompt("Input your Quality Include : ");
+                if(regexInt.test(qualityIncluded)){
+                    checkValid = true;
+                } else {
+                    alert("Not integer!!");
+                }
+            }while(!checkValid);
+
+            checkValid = false;
+
+            do{
+                rentDays = prompt("Input your rent days : ");
+                if(regexInt.test(rentDays)){
+                    checkValid = true;
+                } else {
+                    alert("Not integer!!!");
+                }
+            } while(!checkValid);
+
+            cus.setName(name);
+            cus.setCardID(cardID);
+            cus.setBirthDay(birthday);
+            cus.setEmail(email);
+            cus.setAddress(address);
+            cus.setTypeService(typeService);
+            cus.setTypeRoom(typeRoom);
+            cus.setTypeCustomer(typeCustomer);
+            cus.setDiscount(discount);
+            cus.setQualityInclude(qualityIncluded);
+            cus.setRentDays(rentDays);
+
+            listCustomer.push(cus);
+
+            alert("Success!")
+            displayMainMenu();
+        }
+
+        
+        function displayCustomer(){
+            let temp ="";
+            for(let i = 0 ; i < listCustomer.length ; i++){
+                temp += i + " . Name : " + listCustomer[i].getName() + "\n";
+            }
+            let chooseDisplay = parseInt(prompt(temp));
+            alert("Name : " + listCustomer[chooseDisplay].getName() + "\n" +
+            "cardID : " + listCustomer[chooseDisplay].getCardID() + "\n" +
+            "Birthday : " + listCustomer[chooseDisplay].getBirthDay() + "\n" +
+            "Email : " + listCustomer[chooseDisplay].getEmail() + "\n" +
+            "Address : " + listCustomer[chooseDisplay].getAddress() + "\n" +
+            "Type Service : " + listCustomer[chooseDisplay].getTypeService() + "\n" +
+            "Type Room : " + listCustomer[chooseDisplay].getTypeRoom() + "\n" +
+            "Type Customer : " + listCustomer[chooseDisplay].getTypeCustomer() + "\n" +
+            "Discount : " + listCustomer[chooseDisplay].getDiscount() + "\n" +
+            "Quality Included : " + listCustomer[chooseDisplay].getQualityIncluded() + "\n" +
+            "Rent Days : " + listCustomer[chooseDisplay].getRentDays() + "\n" );
+            displayMainMenu();
+        }
+
+        function displayTotalPays(){
+            let temp ="";
+            for(let i = 0 ; i < listCustomer.length ; i++){
+                temp += i + " . Name : " + listCustomer[i].getName() + "\n";
+            }
+            let chooseDisplay = parseInt(prompt(temp));
+            alert("Your totalPays : " + listCustomer[chooseDisplay].totalPays());
+            displayMainMenu();
+        }
+
+        function editInfo(){
+            let temp ="";
+            for(let i = 0 ; i < listCustomer.length ; i++){
+                temp += i + " . Name : " + listCustomer[i].getName() + "\n";
+            }
+            let chooseDisplay = parseInt(prompt(temp));
+            let chooseEdit = alert("1.Name : " + listCustomer[chooseDisplay].getName() + "\n"
+                            + "2.CardID : " + listCustomer[chooseDisplay].getCardID() + "\n" 
+                            + "3.Birthday : " + listCustomer[chooseDisplay].getBirthDay() + "\n" 
+                            + "4.Email : " + listCustomer[chooseDisplay].getEmail() + "\n" 
+                            + "5.Address : " + listCustomer[chooseDisplay].getAddress() + "\n" 
+                            + "6.Type Service : " + listCustomer[chooseDisplay].getTypeService() + "\n" 
+                            + "7.Type Room : " + listCustomer[chooseDisplay].getTypeRoom() + "\n" 
+                            + "8.Type Customer : " + listCustomer[chooseDisplay].getTypeCustomer() + "\n" 
+                            + "9.Discount : " + listCustomer[chooseDisplay].getDiscount() + "\n" 
+                            + "10.Quality Included : " + listCustomer[chooseDisplay].getQualityIncluded() + "\n"
+                            + "11.Rent Days : " + listCustomer[chooseDisplay].getRentDays() + "\n");
+                            switch(chooseEdit){
+                                case 1: listCustomer[chooseDisplay].getName() = prompt("Enter name : ");
+                                    break;
+                                case 2: listCustomer[chooseDisplay].getCardID() = prompt("Enter CardID : ");
+                                    break;
+                                default:
+                                    alert("Fail!");
+                            }
+                            editInfo();
+                            displayMainMenu();
+        }
+
+        displayMainMenu();
+    </script>
+</body>
+</html>

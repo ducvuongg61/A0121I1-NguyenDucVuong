@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [];
+            let maSo;
+            let loaiTietKiem;
+            let hoTen;
+            let CMND;
+            let ngayMoSo;
+            let soTien;
+            let ngaythang =/^\d{2}[./-]\d{2}[./-]\d{4}$/;
+            let soNguyen = /^[\d]{8,8}$/;
+            let integer = /^\d+$/;
+        function soTietKiem(){
+            let chon = parseInt(prompt("1.Hien thi danh sach." + "\n" + "2.Them so tiet kiem." + "\n" +  "3.Xoa so tiet kiem"));
+            switch(chon){
+                case 1 : hienThi();
+                    break;
+                case 2 : themMoi();
+                    break;
+                case 3 : xoa();
+                    break;
+                default :
+                    alert("Sai!! Moi nhap lai.");
+            }
+        }
+
+
+        function hienThi(){
+            let temp = "";
+            for(let i = 0 ; i < arr.length ; i++){
+                temp += i + " . Ma So " + arr[i][0] + "\n";
+            }
+            let hienthi1 = parseInt(prompt(temp));
+            alert("Ma so : " + arr[hienthi1][0] + "\n" + 
+            "Loai Tiet Kiem : " + arr[hienthi1][1] + "\n" + 
+            "Ho ten : " + arr[hienthi1][2] + "\n" + 
+            "CMND : " + arr[hienthi1][3] + "\n" + 
+            "Ngay mo so : " + arr[hienthi1][4] + "\n" + 
+            "So tien : " + arr[hienthi1][5] + "\n");
+            soTietKiem();
+            
+        }
+
+
+        function themMoi(){
+            let arr2 = [];
+            let keimtraSo = false;
+            maSo = prompt("Nhap ma so  : ");
+
+            
+
+            keimtraSo = false;
+
+            loaiTietKiem = prompt("Nhap loai tien tiet kiem  : ");
+            hoTen = prompt("Nhap ho ten : ");
+
+            do{
+                CMND = prompt("Nhap CMND : ");
+                if(soNguyen.test(CMND)){
+                    keimtraSo = true;
+                } else {
+                    alert("Nhap sai!");
+                }
+            } while(!keimtraSo)
+
+            keimtraSo = false;
+
+
+            do{
+                ngayMoSo = prompt("Nhap ngay mo so : ");
+                if(ngaythang.test(ngayMoSo)){
+                    keimtraSo = true;
+                } else {
+                    alert("Khong hop le!!")
+                }
+            } while(!keimtraSo)
+
+            do{
+                soTien = prompt("Nhap so tien gui : ");
+                if(integer.test(soTien)){
+                    keimtraSo = true;
+                } else {
+                    alert("Nhap sai!");
+                }
+            } while(!keimtraSo)
+
+            arr2.push(maSo);
+            arr2.push(loaiTietKiem);
+            arr2.push(hoTen);
+            arr2.push(CMND);
+            arr2.push(ngayMoSo);
+            arr2.push(soTien);
+
+            arr.push(arr2);
+
+            alert("Nhap thanh cong.");
+
+            soTietKiem();
+        }
+
+
+        function xoa(){
+            let temp = "";
+            for(let i = 0 ; i < arr.length ; i++){
+                temp += i + " . Ma so : " + arr[i][0] + "\n";
+            }
+            let chonXoa = parseInt(prompt(temp));
+            let kiemTra = parseInt(prompt("Ban co muon xoa khong ?" + "\n" + "1.Co" + "\n" + "2.Khong"));
+            if(kiemTra === 1){
+                arr.splice(chonXoa,1);
+                alert("Xoa Thanh Cong")
+            } else {
+                alert("Huy xoa.");
+            } 
+            soTietKiem();
+        }
+
+        soTietKiem();
+    </script>
+</body>
+</html>

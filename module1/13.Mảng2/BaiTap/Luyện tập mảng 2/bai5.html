@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = ["Hoc lap trinh"];
+        let b = ["Hoc lap trinh 1"];
+        let temp = false;
+
+        for(let i = 0 ; i < str.length ; i++){
+            for(let j = 0 ; j < b.length ; j++){
+                if(str[i] === b[j]){
+                    temp = true;
+                }
+            }
+            
+        }
+
+        if(temp === false){
+            document.write("Chuoi trung nhau");
+        } else {
+            document.write("Chuoi khong trung nhau");
+        }
+    </script>
+</body>
+</html>

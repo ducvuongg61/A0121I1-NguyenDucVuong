@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document</title>
+</head>
+<body>
+<table>
+<form>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><input type="text" name="sotien"  id="money"></td>
+        <td>
+            <select name="currency" id="fromCurrency">
+                <option value="VND">VND</option>
+                <option value="USD">USA</option>
+           </select>
+        </td>
+        <td>
+            <select name="currency" id="toCurrency">
+                <option value="USD">USA</option>
+                <option value="VND">VND</option>
+            </select>
+        </td>
+        <td><button type="button" onclick="result();">Convert</button></td>
+    </tr>
+</form>
+</table>
+<div id="result"></div>
+<script>
+    function result() {
+        var money = document.getElementById("money").value;
+        var fromCurrency = document.getElementById("fromCurrency").value;
+        var toCurrency = document.getElementById("toCurrency").value;
+        var div = document.getElementById("result");
+        if(fromCurrency == "VND" && toCurrency =="USD") {
+            var result = parseInt(money / 23000);
+            div.innerHTML ="Result:" + result + " USD";
+        } else if(fromCurrency == "USD" && toCurrency=="VND" ) {
+            var result = parseInt(money * 23000);
+            div.innerHTML ="Result:" + result + " VND";
+        }
+    }
+</script>
+</body>
+</html>

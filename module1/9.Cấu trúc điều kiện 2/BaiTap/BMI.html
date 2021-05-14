@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Chieu cao : </td>
+            <td><input type="text" id="chieucao"></td>
+        </tr>
+        <tr>
+            <td>Can nang : </td>
+            <td>
+                <input type="text"  id="cannang">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" onclick="tinhtoan();">Tinh BMI</button>
+            </td>
+        </tr>
+    </table>
+    <div id="result"></div>
+    <script>
+        function tinhtoan(){
+            var chieucao = document.getElementById('chieucao').value;
+            var cannang = document.getElementById('cannang').value;
+            var div = document.getElementById('result')
+            var bmi = parseFloat(cannang / (chieucao * chieucao));
+            div.innerHTML = bmi;
+            if(bmi < 18){
+                div.innerHTML = "Underweight";
+            } else if(bmi < 25){
+                div.innerHTML = "Normal";
+            } else if(bmi < 30) {
+                div.innerHTML = "OverWeight";
+            } else {
+                div.innerHTML = "Obese";
+            }
+        }
+    </script>
+</body>
+</html>

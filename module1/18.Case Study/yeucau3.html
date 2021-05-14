@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let name;
+        let cardID;
+        let birthday;
+        let email;
+        let address;
+        let typeService;
+        let typeRoom;
+        let typeCustomer;
+        let discount;
+        let qualityIncluded;
+        let rentDays;
+
+
+        let check = false;
+
+
+
+        let tempName = "";
+        name = prompt("Enter a name : ");
+        name = name.trim().toLowerCase(); // Khoang trang 2 ben trai phai dc loai bo
+        for(let i = 0 ; i < name.length ; i++){  // Dung de khong hien thhi khoang trong o giua
+            if(name.charAt(i) === " " && name.charAt(i+1) === " "){
+                continue;
+            }
+            if(i === 0 || name.charAt(i - 1) === " "){
+                tempName += name.charAt(i).toUpperCase();
+                continue;
+            }
+            tempName += name.charAt(i);
+        }
+
+        name = tempName;
+
+
+        do{
+            cardID =  prompt("Enter a CardID : ");
+            if(!isNaN(cardID)){
+                cardID = Number.parseFloat(cardID);
+            }
+            if(!Number.isInteger(cardID)){
+                alert("Error CardID!!");
+                continue;
+            }
+            if(cardID < 100000000 || cardID > 999999999){
+                alert("Error CardID!!");
+                continue;
+            }
+            check = true;
+        } while(!check);
+
+        check = false;
+
+        do{
+            birthday = prompt("Enter a birthday : ");
+            if(birthday.charAt(2) === "/" && birthday.charAt(5) === "/"){
+                let day = birthday.substring(0,2);
+                let month = birthday.substring(3,5);
+                let year = birthday.substring(6,10);
+                if(!isNaN(day) && !isNaN(month) && !isNaN(year)){
+                    day = Number.parseFloat(day);
+                    month = Number.parseFloat(month);
+                    year = Number.parseFloat(year);
+                    if(Number.isInteger(day) && Number.isInteger(month) && Number.isInteger(year)){
+                        if(day < 32 && month < 13 && year > 1950){
+                            check = true;
+                        }
+                    }
+                }
+            } if(!check){
+                alert("Error!!");
+            }
+        }while(!check)
+        
+        check = false;
+        
+        do{
+            let countArt = 0;
+            let countDot = 0;
+            email = prompt("Enter a mail : ");
+            for(let i = 0 ; i < email.length ; i++){
+                if(email.charAt(i) === '@'){
+                    countArt++;
+                    for(let j = i + 1 ; j < email.length ; j++){
+                    if(email.charAt(j) === '.'){
+                        countDot++;
+                        }
+                
+                    }
+                }
+            } if(countArt != 1 || countDot < 1){
+                alert("Error Email!!!");
+            }
+            else {
+                check = true;
+            }
+        } while(!check);
+
+        check = false;
+
+        address = prompt("Enter a address : ");
+        let tempAddress = "";
+        address = address.trim().toLowerCase();
+        for(let i = 0 ; i < address.length ; i++){
+            if(address.charAt(i) === " " && address.charAt(i + 1) === " "){
+                continue;
+            }
+            if( i === 0 || address.charAt(i - 1) === " "){
+                tempAddress += address.charAt(i).toUpperCase();
+                continue;
+            }
+            tempAddress += address.charAt(i);
+        }
+
+        address = tempAddress;
+
+
+        typeService = prompt("Enter a typeService : ");
+        let tempService = "";
+        typeService = typeService.trim().toLowerCase();
+        for(let i = 0 ; i < typeService.length ; i++){
+            if(typeService.charAt(i) === " " && typeService.charAt(i + 1) === " "){
+                continue;
+            }
+            if(i === 0 || typeService.charAt(i - 1) === ""){
+                tempService += typeService.charAt(i).toUpperCase();
+                continue;
+            }
+            tempService += typeService.charAt(i);
+        }
+
+        typeService = tempService;
+
+
+
+        typeRoom = prompt("Enter a typeRoom : ");
+        let tempRoom = "";
+        typeRoom = typeRoom.trim().toLowerCase();
+        for(let i = 0 ; i < typeRoom.length ; i++){
+            if(typeRoom.charAt(i) === " " && typeRoom.charAt(i + 1) === " "){
+                continue;
+            }
+            if(i === 0 || typeRoom.charAt(i - 1) === " "){
+                tempRoom += typeRoom.charAt(i).toUpperCase();
+                continue;
+            }
+            tempRoom += typeRoom.charAt(i);
+        }
+
+        typeRoom = tempRoom;
+
+        typeCustomer = prompt("Enter a typeCustomer : ");
+        let tempCustomer = "";
+        typeCustomer = typeCustomer.trim().toLowerCase();
+        for(let i = 0; i < typeCustomer.length ; i++){
+            if(typeCustomer.charAt(i) === " " && typeCustomer.charAt(i + 1) === ""){
+                continue;
+            }
+            if(i === 0 || typeCustomer.charAt(i - 1) === " "){
+                tempCustomer += typeCustomer.charAt(i).toUpperCase();
+                continue;
+            }
+            tempCustomer += typeCustomer.charAt(i);
+        }
+
+        typeCustomer = tempCustomer;
+
+        check = false;
+
+        do{
+            discount = prompt("Enter a discount : ");
+            if(!isNaN(discount)){
+                discount = Number.parseFloat(discount);
+                if(Number.isInteger(discount) && discount >= 0){
+                    check = true;
+                }
+            }
+            if(!check){
+                alert("Discount is not integer!!");
+            }
+        }while(!check);     
+
+        check = false;
+
+        do{
+            qualityIncluded = prompt("Enter a qualityIncluded : ");
+            if(!isNaN(qualityIncluded)){
+                qualityIncluded = Number.parseFloat(qualityIncluded);
+                if(Number.isInteger(qualityIncluded) && qualityIncluded > 0){
+                    check = true;
+                }
+            }
+            if(!check){
+                alert("Rent is not integer!");
+            }
+        }while(!check);
+
+
+        check = false;
+
+        do{
+            rentDays = prompt("Enter a rent days : ");
+            if(!isNaN(rentDays)){
+                rentDays = Number.parseFloat(rentDays);
+                if(Number.isInteger(rentDays)){
+                    check = true;
+                }
+            }
+            if(!check){
+                alert("Rent is not integer!");
+            }
+        }while(!check);
+        check = false;
+
+        alert("Name : " + name + "\n" +
+        "Identity Card : " + cardID + "\n" + 
+        "Birthday : " + birthday + "\n" + 
+        "Email : " + email + "\n" +
+        "Address : " + address +  "\n" +
+        "Service : " + typeService +"\n" +
+        "Room : " + typeRoom + "\n" +
+        "Customer : " + typeCustomer + "\n" +
+        "Discount : " + discount + "\n" +
+        "Quality Include : " + qualityIncluded + "\n" + 
+        "Rent Day : " + rentDays + "\n"
+        )
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = [];
+        let b = [] ;
+        let n = 2;
+        let count = 0;
+        function baiMang(a){
+            let b = [];
+            document.write(a + "<br>") + "<br/>";
+            document.write(b + "<br/>");
+            document.write(count + "</br>");
+        }
+
+        for(let i = 0;i < 10; i++){
+                a[i] = prompt("Nhap vao mang : ");
+            }
+            document.write( "Mang vua nhap la : " +a);
+
+        for(let i = 0 ; i < a.length ; i++){
+            count++;
+        }   
+        document.write("So luong phan tu trong mang la : " + count);
+
+
+
+
+
+            while(count < numbers){
+            var flag = true;
+            if(n < 2){
+                flag = false;
+            } else {
+                for(var i = 2; i < n - 1; i++){
+                    if(n % 2 == 0){
+                        flag = false;
+                        break;
+                    }
+                }
+            }
+            if(flag == true){
+                document.write( n + " la so nguyen to.<br>");
+                count++;
+            }
+            n++;
+        }
+
+        // let mangso = [];
+        // for(let i = 0 ; i < 10 ; i++){
+        //     mangso[i] = prompt("Nhap so trong mang : " );
+        // }
+        // document.write("Mang la : " + mangso + "<br/>")
+
+        // let count = 0;
+        // for(let i = 0 ; i < mangso.length ; i++){
+        //     count++;
+        // }
+        // document.write("Co " + count + " phan tu trong mang.");
+
+
+        
+    </script>
+</body>
+</html>

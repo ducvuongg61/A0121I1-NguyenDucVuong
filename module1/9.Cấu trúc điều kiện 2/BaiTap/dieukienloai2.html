@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DieuKienLoai2</title>
+    <style>
+        th{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Bai1</th>
+        </tr>
+        <tr>
+            <td>Nhap do C : </td>
+            <td><input type="text" name="" id="doC" placeholder="Nhap do C "></td>
+            <td><button type="submit" onclick="bai1();">Doi sang do F</button></td>
+        </tr>
+        <tr>
+            <td><div id="result1"></div></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table>
+        <tr>
+            <th>Bai2</th>
+        </tr>
+        <tr>
+            <td>Nhap M : </td>
+            <td><input type="text" name="" id="nhapM" placeholder="Nhap met"></td>
+            <td><button type="submit" onclick="bai2();">Doi sang Feet</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><div id="result2"></div></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table>
+        <tr>
+            <th>Bai 3</th>
+        </tr>
+        <tr>
+            <td>Nhap a : </td>
+            <td><input type="text" name="" id="nhapa"></td>
+            <td><button type="submit" onclick="bai3();">Tinh</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><div id="result3"></div></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table>
+        <tr>
+            <th>Bai 4</th>
+        </tr>
+        <tr>
+            <td>Nhap chieu dai : </td>
+            <td><input type="text" name="" id="chieudai"></td>
+        </tr>
+        <tr>
+            <td>Nhap chieu rong : </td>
+            <td><input type="text" name="" id="chieurong"></td>
+            <td><button type="submit" onclick="bai4();">Tinh</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><div id="result4"></div></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table>
+        <tr>
+            <th>Bai 5</th>
+        </tr>
+        <tr>
+            <td>Nhap canh a : </td>
+            <td><input type="text" name="" id="canhA"></td>
+        </tr>
+        <tr>
+            <td>Nhap canh b : </td>
+            <td><input type="text" name="" id="canhB"></td>
+            <td><button type="submit" onclick="bai5();">Tinh</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><div id="result5"></div></td>
+        </tr>
+    </table>
+
+    <br>
+    <table>
+        <tr>
+            <th>Bai 6</th>
+        </tr>
+        <tr>
+            <th colspan="3">Nhap phuong trinh bac 1 : ax + b = 0</th>
+        </tr>
+        <tr>
+            <td>Nhap A : </td>
+            <td><input type="text" name="" id="a"></td>
+        </tr>
+        <tr>
+            <td>Nhap B : </td>
+            <td><input type="text" name="" id="b"></td>
+            <td><button type="submit" onclick="bai6();">Giai PTB1</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><div id="result6"></div></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table>
+        <tr>
+            <th>Bai 7</th>
+        </tr>
+        <tr>
+            <th colspan="3">Nhap phuong trinh bac 2 : ax^2 + bx + c = 0</th>
+        </tr>
+        <tr>
+            <td>Nhap A : </td>
+            <td><input type="text" name="" id="soA"></td>
+        </tr>
+        <tr>
+            <td>Nhap B :</td>
+            <td><input type="text" name="" id="soB"></td>
+        </tr>
+        <tr>
+            <td>Nhap C : </td>
+            <td><input type="text" name="" id="soC"></td>
+            <td><button type="submit" onclick="bai7();">Giai PTB2</button></td>
+        </tr>
+        <tr>
+            <td colspan="3"><div id="result7"></div></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table>
+        <tr>
+            <th>Bai 8</th>
+        </tr>
+        <tr>
+            <td>Nhap tuoi : </td>
+            <td><input type="text" name="" id="nhaptuoi"></td>
+            <td><button type="submit" onclick="bai8();">Xem</button></td>
+        </tr>
+        <tr>
+            <td colspan="3"><div id="result8"></div></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table>
+        <tr>
+            <th>Bai 9</th>
+        </tr>
+        <tr>
+            <td>Nhap A :</td>
+            <td><input type="text" name="" id="canha"></td>
+        </tr>
+        <tr>
+            <td>Nhap B :</td>
+            <td><input type="text" name="" id="canhb"></td>
+        </tr>
+        <tr>
+            <td>Nhap C:</td>
+            <td><input type="text" name="" id="canhc"></td>
+            <td><button type="submit" onclick="bai9();">Xem</button></td>
+        </tr>
+        <tr>
+            <td colspan="3"><div id="result9"></div></td>
+        </tr>
+    </table>
+
+    <br>
+    <script>
+        function bai1(){
+            var doC = document.getElementById('doC').value;
+            var div = document.getElementById('result1');
+            var doF = parseFloat(doC * 9 / 5 + 32);
+            div.innerHTML = doF + "*F";
+        }
+
+        function bai2(){
+            var nhapM =  document.getElementById('nhapM').value;
+            var div = document.getElementById('result2');
+            var feet = parseFloat(nhapM * 3.2808);
+            div.innerHTML = feet + " Feet";
+        }
+
+        function bai3(){
+            var nhapa = document.getElementById('nhapa').value;
+            var div = document.getElementById('result3');
+            var tinh = parseFloat(nhapa * nhapa);
+            div.innerHTML = 'Dien tich hinh vuong la : ' + tinh;
+        }
+
+        function bai4(){
+            var chieudai = document.getElementById('chieudai').value;
+            var chieurong = document.getElementById('chieurong').value;
+            var div = document.getElementById('result4');
+            var S = parseFloat(chieudai * chieurong);
+            div.innerHTML = 'Dien tich HCN la : ' + S;
+        }
+
+        function bai5(){
+            var canhA = document.getElementById('canhA').value;
+            var canhB = document.getElementById('canhB').value;
+            var div = document.getElementById('result5');
+            var S = parseFloat((canhA * canhB) / 2);
+            div.innerHTML = 'Dien tich tam giac vuong la : ' + S ;
+        }
+
+        function bai6(){
+            var a = document.getElementById('a').value;
+            var b = document.getElementById('b').value;
+            var div = document.getElementById("result6");
+            if(a == 0){
+                div.innerHTML = "Phuong trinh vo nghiem.";
+            } else {
+                if(b == 0){
+                    div.innerHTML = "phuong trinh co vo so nghiem.";
+                } else {
+                    div.innerHTML = "Phuong trinh co 1 nghiem x = " + parseFloat(-b/a);
+                }
+            }
+        }
+
+        function bai7(){
+            var soA = document.getElementById('soA').value;
+            var soB = document.getElementById('soB').value;
+            var soC = document.getElementById('soC').value;
+            var delta = parseFloat((soB*soB) - (4*soA*soC));
+            var div = document.getElementById('result7');
+            if(soA == 0){
+                if(soB == 0){
+                    if(soC == 0){
+                        div.innerHTML = "Phuong tirnh co vo so nghiem.";
+                    } else {
+                        div.innerHTML = "Phuong trinh vo nghiem.";
+                    }
+                } else {
+                    div.innerHTML = "Phuong trinh co 1 nghiem duy nhat = " + (-soC/soB);
+                }
+            } else {
+                if(delta < 0){
+                    div.innerHTML = "Phuong trinh vo nghiem.";
+                } else if(delta == 0){
+                    div.innerHTML = "Phuong trinh co ngiem kep x = " + parseFloat(-soB/2*soA);
+                } else {
+                    div.innerHTML = "Phuong trinh co 2 nghiem : x1 = " + parseFloat((-soB + Math.sqrt(delta))/(2*soA))
+                    +  " x2 = " + parseFloat((-soB - Math.sqrt(delta)) / (2*soA));
+                }
+            }
+        }
+
+        function bai8(){
+            var nhaptuoi = document.getElementById('nhaptuoi').value;
+            var div = document.getElementById('result8');
+            if(nhaptuoi > 0 && nhaptuoi < 120){
+                div.innerHTML = "La tuoi cua con nguoi.";
+            } else {
+                div.innerHTML = "Khong phai tuoi cua con nguoi.";
+            }
+        }
+
+        function bai9(){
+            var canha = document.getElementById('canha').value * 1;
+            var canhb = document.getElementById('canhb').value * 1;
+            var canhc = document.getElementById('canhc').value * 1;
+            var div = document.getElementById('result9');
+            if(canha > 0 && canhb > 0 && canhc > 0){
+                if(canha + canhb > canhc || canha + canhc > canhb || canhb + canhc > canha){
+                    div.innerHTML = "Day la 1 tam giac.";
+                } else {
+                    div.innerHTML = "Day khong phai la 1 tam giac.";
+                }
+            } else {
+                div.innerHTML = "Day khong phai la 1 tam giac.";
+            }
+        }
+    </script>
+</body>
+</html>

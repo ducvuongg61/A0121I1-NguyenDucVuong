@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    class Product {
+        constructor(id, name, price, description) {
+            this.id = id;
+            this.name = name;
+            this.price = price;
+            this.description = description;
+        }
+    }
+    function display() {
+        document.body.innerHTML="";
+        let temp= "<button onclick='showFormCreate()'>Create</button>"
+         temp += "<table border='1'>"
+        for (let i = 0; i < listProduct.length; i++) {
+            temp += "<tr>";
+            temp += "<td>"+listProduct[i].id+"</td>";
+            temp += "<td>"+listProduct[i].name+"</td>";
+            temp += "<td>"+listProduct[i].price+"</td>";
+            temp += "<td>"+listProduct[i].description+"</td>";
+            temp += "<td><button onclick='deleteProduct("+i+")'>Delete</button></td>";
+            temp += "</tr>";
+        }
+        temp += "</table>"
+        document.writeln(temp)
+    }
+    function deleteProduct(i) {
+        if(confirm("bạn có muốn xóa hay không?")) {
+            listProduct.splice(i,1);
+            display();
+        }
+    }
+    function showFormCreate() {
+        document.body.innerHTML="";
+        let temp = "<h3>Form Create</h3>";
+        temp+="<lable>ID</lable><input type='text' id='idProduct'><br>";
+        temp+="<lable>Name</lable><input type='text' id='name'><br>";
+        temp+="<lable>Price</lable><input type='text' id='price'><br>";
+        temp+="<lable>Description</lable><input type='text' id='description'><br>";
+        temp+="<input type='button' value='Submit' onclick='submitCreate()'><br>";
+        document.writeln(temp)
+    }
+    function submitCreate() {
+        let id = document.getElementById("idProduct").value;
+        let name = document.getElementById("name").value;
+        let price = document.getElementById("price").value;
+        let description = document.getElementById("description").value;
+        let product = new Product(id,name,price,description);
+        listProduct.push(product);
+        display();
+    }
+    function main() {
+        let product1 = new Product(1, "Nokia", "1,000,000đ", "Siêu vip");
+        let product2 = new Product(2, "Iphone", "1,000,000đ", "Siêu vip");
+        let product3 = new Product(3, "SamSung", "1,000,000đ", "Siêu vip");
+        listProduct.push(product1);
+        listProduct.push(product2);
+        listProduct.push(product3);
+        display();
+    }
+    let listProduct = [];
+    main();
+</script>
+</body>
+</html>

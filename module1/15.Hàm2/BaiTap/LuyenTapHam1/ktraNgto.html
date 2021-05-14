@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // function isPrime(number){
+        //    var p = true;
+        //    if(n < 2){
+        //        p = false;
+        //    } else {
+        //        for(let i = 2 ; i < n - 1 ; i++ ){
+        //             if(n % i == 0){
+        //                 p = false;
+        //                 break;
+        //             }
+        //        }
+        //    }
+        //    if(p === true){
+        //        return (n + " la so nguyen to.<br/>")
+        //    } else {
+        //        return (n + " khong phai la so nguyen to.<br/>")
+        //    }
+        // }
+
+        function isPrime(n) {
+            var flag = true;
+            if (n < 2) {
+                flag = false;
+            } else if (n == 2) {
+                flag = true;
+            } else if (n % 2 == 0) {
+                flag = false;
+            } else {
+                for (var i = 3; i < n-1; i+=2) {
+                    if (n % i == 0) {
+                        flag = false;   
+                        break;
+                }
+            }
+        }
+
+        if (flag == true) {
+            document.write(n + " là số nguyên tố <br/>");
+        } else {
+            document.write(n + " không phải là số nguyên tố <br/>");
+        }
+    }
+
+    isPrime(1);
+    isPrime(2);
+    isPrime(3);
+    isPrime(4);
+    isPrime(5);
+
+    //     let num = parseInt(prompt("Nhập vào số nguyên:"));
+    //     let count = 0;
+    //     let n =2;
+    //     while(count < num){
+    //         let isPrime = true;
+    //         for(let i=2; i<n;i++) {
+    //             if(n%i==0) {
+    //             isPrime = false;
+    //             break;
+    //         }
+    //     }
+    //     if(isPrime) {
+    //         document.write(n);
+    //         count++;
+    //     }
+    //     n++;
+    // }
+    </script>
+</body>
+</html>

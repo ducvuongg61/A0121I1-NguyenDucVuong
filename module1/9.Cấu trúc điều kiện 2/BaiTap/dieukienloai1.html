@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DieuKienLoai1</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Nhap A : </td>
+            <td><input type="text" name="" id="nhapA"></td>
+        </tr>
+        <tr>
+            <td>Nhap B : </td>
+            <td><input type="text" name="" id="nhapB"></td>
+            <td><button type="submit" onclick="bai1();">Tinh</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"> <div id="result1"></div></td>
+        </tr>
+    </table>
+    <br>   
+    <table>
+        <tr>
+            <td>Nhap tuoi : </td>
+            <td><input type="text" name="" id="nhaptuoi"></td>
+            <td><button type="submit" onclick="bai2();">Xem :</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><div id="result2"></div></td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <td>Nhap so : </td>
+            <td><input type="text" name="" id="nhapso"></td>
+            <td><button type="submit" onclick="bai3();">Xem :</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><div id="result3"></div></td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <td>Nhap A :</td>
+            <td><input type="text" name="" id="a"></td>
+        </tr>
+        <tr>
+            <td>Nhap B: </td>
+            <td><input type="text" name="" id="b"></td>
+        </tr>
+        <tr>
+            <td>Nhap C :</td>
+            <td><input type="text" name="" id="c"></td>
+            <td><button type="submit" onclick="bai4();">So lon nhat la</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><div id="result4"></div></td>
+        </tr>
+    </table>
+    <br>
+    <table>
+
+    </table>
+    <script>
+        function bai1(){
+            var nhapA = document.getElementById('nhapA').value;
+            var nhapB = document.getElementById('nhapB').value;
+            var div = document.getElementById('result1');
+            if(nhapA % nhapB == 0){
+                div.innerHTML = nhapA + " chia het cho " + nhapB;
+            } else {
+                div.innerHTML = nhapA + " khong chia het cho " + nhapB;
+            }
+        }
+
+        function bai2(){
+            var nhaptuoi = document.getElementById('nhaptuoi').value;
+            var div = document.getElementById('result2');
+            if(nhaptuoi >= 15){
+                div.innerHTML = "Du dieu kien de hoc lop 10.";
+            } else {
+                div.innerHTML = "Khong du dieu kien de hoc lop 10.";
+            }
+        }
+
+        function bai3(){
+            var nhapso = document.getElementById('nhapso');
+            var div = document.getElementById('result3');
+            if(nhapso > 0){
+                div.innerHTML = "So lon hon 0";
+            } else {
+                div.innerHTML = "So nho hon 0";
+            }
+        }
+
+        function bai4(){
+            var a = document.getElementById('a').value;
+            var b = document.getElementById('b').value;
+            var c = document.getElementById('c').value;
+            var div =  document.getElementById("result4");
+            if(a > b && a > c){
+                div.innerHTML =  a + " la so lon nhat.";
+                } else if(b > a && b > c){
+                    div.innerHTML = b + " la so lon nhat.";
+                } else if(c > a && c > b){
+                    div.innerHTML = c + " la so lon nhat.";
+                }
+            }
+    </script>
+</body>
+</html>

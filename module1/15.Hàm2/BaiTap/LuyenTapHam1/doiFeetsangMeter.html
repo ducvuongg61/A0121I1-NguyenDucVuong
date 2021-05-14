@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th> Enter Feet : </th>
+            <th><input type="text" name="" id="feet"></th>
+            <th><button type="submit" onclick="footToMeter();">Change</button></th>
+        </tr>
+        <tr>
+            <td style="text-align: right;">Meters : </td>
+            <td colspan="2"><div id="result 1"></div></td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+    <br>
+
+    <table>
+        <tr>
+            <th>Enter Meters :</th>
+            <th><input type="text" name="" id="met"></th>
+            <th><button type="submit" onclick="metersToFeet();">Change</button></th>
+        </tr>
+        <tr>
+            <td style="text-align: right;">Feet : </td>
+            <td colspan="2"><div id="result2"></div></td>
+        </tr>
+    </table>
+    <script>
+        function footToMeter(foot){
+            foot = document.getElementById("feet").value;
+            let div = document.getElementById("result 1");
+            let meters = parseFloat(0.305 * foot);
+            div.innerHTML = meters + "M";
+        }
+
+        function metersToFeet(meter){
+            meter = document.getElementById("met").value;
+            let div = document.getElementById("result2");
+            let feet = parseFloat(3.279 * meter);
+            div.innerHTML = feet + "F";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nameCustomer = "Nguyen Duc Vuong";
+        let emailCustomer = "ducvuongg0601@gmail.com";
+        let idCard = "123456789";
+        let birthdayCustomer = "12/12/2000";
+        let addressCustomer = "Da Nang";
+        let typeCustomer = "Diamond";
+        let discount = 10;
+        let numberOfAccompanying = 2;
+        let typeRoom = "Business";
+        let rentDays = 10;
+        let typeService = "Villa";
+        let moneyPerDays = 0;
+
+
+        let choose = parseInt(prompt("1.Show Information Customer" + 
+        "\n" + "2.Edit Information Customer" + 
+        "\n" + "3.Show the amount to be paid after discount"));
+
+        switch(choose){
+            case 1: alert("Ten : " + nameCustomer + "\n" + "Email : " + emailCustomer + "\n" 
+                            + "ID : " + idCard + "\n" + "Birthday : " + "\n" + "Address : " + "\n" 
+                            + "Type Customer : " + typeCustomer + "\n" + "Discount : " + "\n" 
+                            + "Number Of Accompanying : " + numberOfAccompanying + "\n" 
+                            + "Type Room : " + typeRoom + "\n" + "Rent Days : " + rentDays + "\n"
+                            + "Type Service : " + typeService + "\n");
+                            break;
+            case 2: let chooseEdit = parseInt(prompt("1.Ten : " + nameCustomer + "\n" + "2.Email : " + emailCustomer + "\n" 
+                            + "3.ID : " + idCard + "\n" + "4.Birthday : " + "\n" + "5.Address : " + "\n" 
+                            + "6.Type Customer : " + typeCustomer + "\n" + "7.Discount : " + "\n" 
+                            + "8.Number Of Accompanying : " + numberOfAccompanying + "\n" 
+                            + "9.Type Room : " + typeRoom + "\n" + "10.Rent Days : " + rentDays + "\n"
+                            + "11.Type Service : " + typeService + "\n"));
+                            switch(chooseEdit){
+                                case 1 : nameCustomer = prompt("Enter Name : ");
+                                break;
+                                case 2 : emailCustomer = prompt("Enter Email : ");
+                                break;
+                                case 3 : idCard = prompt("Enter ID : ");
+                                break;
+                                case 4 : birthdayCustomer = prompt("Enter Birthday : ");
+                                break;
+                                case 5 : addressCustomer = prompt("Enter Address : ");
+                                break;
+                                case 6 : typeCustomer = prompt("Enter Type Customer : ");
+                                break;
+                                case 7 : discount = prompt("Enter discount : ");
+                                break;
+                                case 8 : numberOfAccompanying = prompt("Enter Number Of Companying : ");
+                                break;
+                                case 9 : typeRoom = prompt("Enter Type Room : ");
+                                break;
+                                case 10 : rentDays = prompt("Enter Rent Days : ");
+                                break;
+                                case 11 : typeService = prompt("Enter Type Service : ");
+                                break;
+                            }
+                            alert("Ten : " + nameCustomer + "\n" + "Email : " + emailCustomer + "\n" 
+                            + "ID : " + idCard + "\n" + "Birthday : " + "\n" + "Address : " + "\n" 
+                            + "Type Customer : " + typeCustomer + "\n" + "Discount : " + "\n" 
+                            + "Number Of Accompanying : " + numberOfAccompanying + "\n" 
+                            + "Type Room : " + typeRoom + "\n" + "Rent Days : " + rentDays + "\n"
+                            + "Type Service : " + typeService + "\n");
+                            break;
+                            default:{
+                                alert("Fail!");
+                            }
+
+            case 3: let money = 0;
+                            let moneyTypeService = 0;
+                            let moneyAddress = 0;
+                            let moneyRenDays = 0;
+                            let moneyCustomer = 0;
+
+                            let moneyHaveToPay = 0;
+                            let moneyDiscount = 0;
+                            if(typeService === "Villa"){
+                                moneyTypeService = 500;
+                            }
+                            if(typeService === "House"){
+                                moneyTypeService == 300;
+                            }
+                            if(typeService === "Room"){
+                                moneyTypeService = 100;
+                            }
+
+                            if(addressCustomer === "Da Nang"){
+                                moneyAddress = 20;
+                            }
+                            if(addressCustomer === "Hue"){
+                                moneyAddress = 10;
+                            }
+                            if(addressCustomer === "Quang Nam"){
+                                moneyAddress = 5;
+                            }
+
+                            if(rentDays > 7 ){
+                                moneyRenDays = 30;
+                            }
+                            if(rentDays <= 5 && rentDays >= 7){
+                                moneyRenDays = 20;
+                            }
+                            if(rentDays <=2 && rentDays >= 4){
+                                moneyRenDays = 10;
+                            }
+
+                            if(typeCustomer === "Diamond"){
+                                moneyCustomer = 15; 
+                            }
+                            if(typeCustomer === "Platinum"){
+                                moneyCustomer = 10; 
+                            }
+                            if(typeCustomer === "Gold"){
+                                moneyCustomer = 5; 
+                            }
+                            if(typeCustomer === "Sliver"){
+                                moneyCustomer = 2; 
+                            }
+                            if(typeCustomer === "Member"){
+                                moneyCustomer = 0; 
+                            }
+                            
+                            moneyDiscount = parseFloat(moneyAddress + moneyRenDays + moneyCustomer);
+                            moneyHaveToPay = parseFloat(moneyTypeService * rentDays - moneyDiscount);
+                            alert("Money Have To Pay : " + moneyHaveToPay);
+                            break;
+                            
+        }
+    </script>
+</body>
+</html>

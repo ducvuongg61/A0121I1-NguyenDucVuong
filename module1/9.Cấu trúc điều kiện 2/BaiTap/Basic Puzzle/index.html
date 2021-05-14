@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Puzzle</title>
+</head>
+<body>
+<div style="display: flex;">
+<!--    <div id="a" style="width: 250px;">-->
+        <img src="Image/Hinh1a.png" alt="1" onclick="change('a')" id="carA" width="250px" height="600px">
+        <img src="Image/Hinh2b.png" alt="2" onclick="change('b')" id="carB" width="250px" height="600px">
+        <img src="Image/Hinh3c.png" alt="3" onclick="change('c')" id="carC" width="250px" height="600px">
+        <img src="Image/Hinh1d.png" alt="1" onclick="change('d')" id="carD" width="250px" height="600px">
+        <img src="Image/Hinh2e.png" alt="2" onclick="change('e')" id="carE" width="250px" height="600px">
+<!--    </div>-->
+<script>
+    // let carA = document.getElementById("carA");
+    // let carB = document.getElementById("carB");
+    // let carC = document.getElementById("carC");
+    // let carD = document.getElementById("carD");
+    // let carE = document.getElementById("carE");
+    function change(sub) {
+        let car = document.getElementById("car" + sub.toUpperCase());
+        let no = Number(car.alt);
+        no++;
+        if (no > 3) {
+            no = no - 3;
+        }
+        car.src = "Image/Hinh" + no + sub + ".png";
+        car.alt = no;
+    }
+</script>
+</body>
+</html>

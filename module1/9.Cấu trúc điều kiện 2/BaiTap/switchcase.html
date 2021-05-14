@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <input type="text" name="" id="nhapthang">
+            </td>
+            <td>
+                <button type="submit" onclick="thang();">Tinh so ngay trong thang.</button>
+            </td>
+        </tr>
+    </table>
+    <div id="result"></div>
+    <script>
+        function thang(){
+            var nhapthang = document.getElementById('nhapthang').value * 1;
+            var div = document.getElementById('result');
+            switch(nhapthang){
+                case 1: 
+                    div.innerHTML = "Thang co 31 ngay.";
+                    break;
+                case 2:
+                    div.innerHTML = "Thang co 28 hoac 29 ngay.";
+                break;
+                case 3:
+                    div.innerHTML = "Thang co 31 ngay.";
+                    break;
+                case 4:
+                    div.innerHTML = "Thang co 30 ngay.";
+                break;
+                case 5: 
+                    div.innerHTML = "Thang co 31 ngay.";
+                    break;
+                case 6:
+                    div.innerHTML = "Thang co 30 ngay.";
+                    break;
+                case 7: 
+                    div.innerHTML = "Thang co 31 ngay";
+                    break;
+                case 8:
+                    div.innerHTML = "Thang co 31 ngay.";
+                break;
+                case 9: 
+                    div.innerHTML = "Thang co 30 ngay.";
+                    break;
+                case 10:
+                    div.innerHTML = "Thang co 31 ngay.";
+                break;
+                case 11: 
+                    div.innerHTML = "Thang co 30 ngay.";
+                    break;
+                case 12:
+                    div.innerHTML = "Thang co 31 ngay.";
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var bang , i , j;
+        bang = "<table border = '1' width = '1100' cellspacing = '2' cellpadding ='20'>";
+        i = 2, j = 1;
+        while(i < 10){
+            bang = bang + "<tr>";
+            while(j < 10){
+                bang = bang +"<td>" + i +" x " + j + " = " + i * j + "</td>";
+                j++;
+            }
+            bang = bang + "</tr>";
+            j = 1;
+            i++;
+        }
+        bang = bang + "</table>";
+        document.write(bang);
+    </script>
+</body>
+</html>

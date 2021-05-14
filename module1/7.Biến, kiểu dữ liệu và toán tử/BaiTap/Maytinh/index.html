@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="2"><input type="text" name="" id="number1"></td>
+            <td colspan="2"><input type="text" name="" id="number2"></td>
+        </tr>
+        <tr>
+            <td><button type="submit" name="add" onclick="add()">Addition(+)</button></td>
+            <td><button type="submit" name="sub" onclick="sub()">Subtraction(-)</button></td>
+            <td><button type="submit" name="mul" onclick="mul()">Multiplication(*)</button></td>
+            <td><button type="submit" name="div" onclick="divi()">Division(/)</button></td>
+        </tr>
+    </table>
+    <div id="result"></div>
+    <script>
+        function add(){
+            var number1 = document.getElementById("number1");
+            var number2 = document.getElementById("number2");
+            var add = document.getElementById("add");
+            var div = document.getElementById("result");
+            var result = parseInt(number1.value,10) + parseInt(number2.value,10);
+            div.innerHTML = "Result Addition : " + result;
+        }
+        function sub(){
+            var number1 = document.getElementById("number1");
+            var number2 = document.getElementById("number2");
+            var sub = document.getElementById("sub");
+            var div =  document.getElementById("result");
+            var result = parseInt(number1.value,10)  - parseInt(number2.value,10);
+            div.innerHTML = "Result Subtraction : " + result;
+        }
+        function mul(){
+            var number1 = document.getElementById("number1");
+            var number2 =  document.getElementById("number2");
+            var mul = document.getElementById("mul");
+            var div = document.getElementById("result");
+            var result = parseInt(number1.value,10) * parseInt(number2.value,10);
+            div.innerHTML = "Result Multiplication : " + result;
+        }
+        function divi(){
+            var number1 = document.getElementById("number1");
+            var number2 = document.getElementById("number2");
+            var divi = document.getElementById("divi");
+            var div = document.getElementById("result");
+            var result = parseInt(number1.value,10) / parseInt(number2.value,10);
+            div.innerHTML = "Result Division : " + result;
+        }
+    </script>
+</body>
+</html>

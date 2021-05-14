@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function arr(str){
+            let v = [];
+            document.write(v);
+            document.write(str);
+        }
+
+        let str =[];
+        for(let i = 0 ; i < 10 ; i++){
+            str[i] = prompt("Enter character : " + (str.length + 1) );
+        }
+        let v = [];
+        for(let i = 0 ; i < 1 ; i++){
+            v[i] = prompt("Enter any 1 character : ")
+        }
+        let n = 0;
+        for(let i = 0 ; i < str.length ; i++){
+            for(let j = 0 ; j < v.length ; j++){
+                if(str[i] === v[j]){
+                    n++;
+                }
+            }
+        }
+
+        arr( "Mang vua nhap 10 ky tu : " + str + "<br/>");
+        
+        arr( "Mang vua nhap 1 ky tu bat ky : " + v + "<br/>");
+        document.write("Co " + n + " ky tu trung nhau.");
+    </script>
+</body>
+</html>
