@@ -1,34 +1,30 @@
 package b6_kethua.thuchanh;
 
-public class Square  extends Rectangle{
+public class Square extends Shape {
+    private double side;
+
     public Square() {
     }
 
     public Square(double side) {
-        super(side, side);
+        this.side = side;
     }
 
     public Square(double side, String color, boolean filled) {
-        super(side, side, color, filled);
+        super(color, filled);
+        this.side = side;
     }
 
     public double getSide() {
-        return getWidth();
+        return side;
     }
 
     public void setSide(double side) {
-        super.setWidth(side);
-        super.setLength(side);
+        this.side = side;
     }
 
-    @Override
-    public void setWidth(double width) {
-        setSide(width);
-    }
-
-    @Override
-    public void setLength(double length) {
-        setSide(length);
+    public double getArea() {
+        return side * side;
     }
 
     @Override
@@ -36,6 +32,13 @@ public class Square  extends Rectangle{
         return "A Square with side="
                 + getSide()
                 + ", which is a subclass of "
-                + super.toString();
+                + super.toString()
+                + ", Area=" +
+                +getArea();
+    }
+
+    @Override
+    public void resize(double percent) {
+        this.side *= (percent / 200);
     }
 }

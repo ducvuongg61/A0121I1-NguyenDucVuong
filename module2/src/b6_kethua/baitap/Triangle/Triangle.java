@@ -1,6 +1,6 @@
 package b6_kethua.baitap.Triangle;
 
-public class Triangle {
+public class Triangle extends  Shape{
     private double side1 = 1.0;
     private double side2 = 1.0;
     private double side3 = 1.0;
@@ -9,6 +9,13 @@ public class Triangle {
     }
 
     public Triangle(double side1, double side2, double side3) {
+        this.side1 = side1;
+        this.side2 = side2;
+        this.side3 = side3;
+    }
+
+    public Triangle(String color, boolean filled, double side1, double side2, double side3) {
+        super(color, filled);
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
@@ -36,5 +43,20 @@ public class Triangle {
 
     public void setSide3(double side3) {
         this.side3 = side3;
+    }
+
+    public double getPerimeter(){
+        return side1 + side2 + side3;
+    }
+
+    public double getArea(){
+        return Math.sqrt((getPerimeter()/2)*(getPerimeter()/2 - side1)*(getPerimeter()/2 - side2)*(getPerimeter()/2 - side3));
+    }
+
+    @Override
+    public String toString() {
+        return "A Triangle with side 1 = " + side1 + " , side 2 = " + side2 + " , side 3 = " + side3
+                + " , Perimeter = " + getPerimeter() + " , Area = " + getArea()
+                + " , which subclass is : " + super.toString();
     }
 }

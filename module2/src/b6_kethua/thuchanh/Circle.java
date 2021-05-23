@@ -38,4 +38,9 @@ public class Circle extends Shape{
                 + ", which is a subclass of "
                 + super.toString();
     }
+
+    @Override
+    public void resize(double percent) {
+        this.radius *= (percent / 200);
+    }
 }

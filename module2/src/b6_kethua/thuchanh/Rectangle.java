@@ -48,7 +48,14 @@ public class Rectangle extends Shape{
                 + getWidth()
                 + " and length="
                 + getLength()
+                + " and Area = " + getArea()
                 + ", which is a subclass of "
                 + super.toString();
+    }
+
+    @Override
+    public void resize(double percent) {
+        this.length *= (percent / 200);
+        this.width += (percent / 200);
     }
 }

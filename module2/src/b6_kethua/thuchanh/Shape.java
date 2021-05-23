@@ -1,6 +1,8 @@
 package b6_kethua.thuchanh;
 
-public class Shape {
+import b7_Abstract_interface.baitap.Resizeable.Resizeable;
+
+public abstract class Shape implements Resizeable {
     private String color = "green";
     private boolean filled = true;
 
@@ -34,5 +36,11 @@ public class Shape {
                 + getColor()
                 + " and "
                 + (isFilled() ? "filled" : "not filled");
+    }
+
+    public static void printShape(Shape[] shapes){
+        for (Shape x : shapes) {
+            System.out.println(x.toString());
+        }
     }
 }
