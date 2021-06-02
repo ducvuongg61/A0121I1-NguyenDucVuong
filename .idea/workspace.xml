@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dfca0ead-2fb3-48b0-b6c1-c6788ff4e3fd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/module2/src/b11_DSA_stack_queue/baitap/DSLKV/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/b11_DSA_stack_queue/baitap/DSLKV/Queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/b11_DSA_stack_queue/baitap/DSLKV/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/b11_DSA_stack_queue/baitap/DSLKV/SolutionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/b11_DSA_stack_queue/baitap/DaoNguoc/MainStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/b11_DSA_stack_queue/optional/thuchanh/MyQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/b11_DSA_stack_queue/thuchanh/Queue/MyLinkedListQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/b11_DSA_stack_queue/thuchanh/Queue/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/b11_DSA_stack_queue/thuchanh/Stack_LinkedList/MyGenericStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/b11_DSA_stack_queue/thuchanh/Stack_LinkedList/MyGenericStackClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/b10_dsa/baitap/MyList/MyArrayList.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/b10_dsa/baitap/MyList/MyArrayList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/b10_dsa/baitap/MyList/TestMyList.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/b10_dsa/baitap/MyList/TestMyList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/b6_kethua/baitap/Triangle/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/b6_kethua/baitap/Triangle/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/b10_dsa/baitap/MyList/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/b10_dsa/baitap/MyList/MyArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/b10_dsa/baitap/MyList/TestMyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/b10_dsa/baitap/MyList/TestMyList.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1tIhIK5zs0BzUNJuxUbh6KTEt4C" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/module2" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dfca0ead-2fb3-48b0-b6c1-c6788ff4e3fd" name="Default Changelist" comment="" />
+      <created>1622462429213</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622462429213</updated>
+      <workItem from="1622462430677" duration="12000" />
+      <workItem from="1622462471313" duration="12000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1622462481239">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1622462481239" />
+  </component>
+</project>

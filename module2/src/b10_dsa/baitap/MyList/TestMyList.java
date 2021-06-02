@@ -44,26 +44,26 @@ public class TestMyList {
         studentMyArrayList.add(c);
         studentMyArrayList.add(d);
         studentMyArrayList.add(e);
-//        studentMyArrayList.add(2,f);
+        studentMyArrayList.add(8,f);
         studentMyArrayList.size();
 //        System.out.println(studentMyArrayList.size());
 
 //        studentMyArrayList.clear();
 
-//        for (int i = 0; i < studentMyArrayList.size(); i++) {
-//            Student stu = (Student) studentMyArrayList.elements[i];
-//            System.out.println("ID: " + stu.getId() + " & Name : " + stu.getName());
-//        }
+        for (int i = 0; i < studentMyArrayList.size(); i++) {
+            Student stu = (Student) studentMyArrayList.elements[i];
+            System.out.println("ID: " + stu.getId() + " & Name : " + stu.getName());
+        }
 
 //        System.out.println(studentMyArrayList.get(2).getName());
 //        System.out.println(studentMyArrayList.indexOf(c));
 //        System.out.println(studentMyArrayList.contains(b));
 
-        MyArrayList<Student> newMyArrayList = new MyArrayList<>();
-        newMyArrayList = studentMyArrayList.clone();
+//        MyArrayList<Student> newMyArrayList = new MyArrayList<>();
+//        newMyArrayList = studentMyArrayList.clone();
 //        newMyArrayList.remove(0);
-        Student student = newMyArrayList.remove(0);
-        System.out.println(student.getName()); // in ra ket qua cua phan tu remove
+//        Student student = newMyArrayList.remove(0);
+//        System.out.println(student.getName()); // in ra ket qua cua phan tu remove
 //        for (int i = 0; i < newMyArrayList.size(); i++) {
 //            System.out.println(newMyArrayList.get(i).getName());
 //        }

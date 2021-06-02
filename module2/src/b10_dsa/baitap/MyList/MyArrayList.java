@@ -62,10 +62,10 @@ public class MyArrayList<E> {
         }
 
         if (elements[index] == null) {
-            elements[index] = element;
+            elements[Math.min(index, size)] = element;
             size++;
         } else {
-            for (int i = 0; i >= index; i--) {
+            for (int i = size; i >= index; i--) {
                 elements[i] = elements[i - 1];
             }
             elements[index] = element;
