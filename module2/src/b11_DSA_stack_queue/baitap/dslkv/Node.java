@@ -1,4 +1,4 @@
-package b11_DSA_stack_queue.baitap.DSLKV;
+package b11_DSA_stack_queue.baitap.dslkv;
 
 public class Node {
     public int data;

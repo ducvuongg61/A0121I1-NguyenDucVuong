@@ -1,4 +1,4 @@
-package b11_DSA_stack_queue.baitap.DaoNguoc;
+package b11_DSA_stack_queue.baitap.daonguoc;
 
 import java.util.Scanner;
 import java.util.Stack;
