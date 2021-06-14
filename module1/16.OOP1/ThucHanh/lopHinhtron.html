@@ -1,35 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <script>
-        let Circle = function(raidus){
-            this.raidus = raidus;
-
-            this.getRadius = function(){
-                return this.raidus;
-            }
-            this.getArea = function(){
-                return Math.PI * raidus * raidus;
-            }
-        };
-
-
-            let circle = new Circle(4);
-            let radius =  circle.getRadius(); //2
-            let area = circle.getArea(); // 12.56637....
-
-            alert("Radius : " + radius + "; Area : " + area);
-
-
-
-
-
-    </script>
-</body>
+  </head>
+  <body>
+    <div>
+      <input type="text" name="Tên đăng nhập" />
+      <input type="password" name="Mật Khẩu" id="" />
+    </div>
+    <div>
+      <input type="radio" name="gender" id="" />Nam
+      <input type="radio" name="gender" id="" />Nu
+      <input type="radio" name="gender" id="" />Khac
+    </div>
+    <div>
+      <input type="checkbox" name="" id="" />Đáp án 1
+      <input type="checkbox" name="" id="" />Đáp án 2
+      <input type="checkbox" name="" id="" />Đáp án 3
+      <input type="checkbox" name="" id="" />Đáp án 4
+    </div>
+  </body>
 </html>

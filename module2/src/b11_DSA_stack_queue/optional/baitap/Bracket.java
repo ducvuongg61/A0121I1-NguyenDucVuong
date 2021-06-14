@@ -8,8 +8,9 @@ public class Bracket {
 //        String string = "s * (s – a) * (s – b) * (s – c)";
 //        String string = "(– b + (b2 – 4*a*c)^0.5) / 2*a  ";
         String string = "s * (s – a) * (s – b * (s – c)";
+        char check;
         for (int i = 0; i < string.length(); i++) {
-            char check = string.charAt(i);
+            check = string.charAt(i);
             if (check == '(') {
                 stack.push(string.charAt(i));
             }

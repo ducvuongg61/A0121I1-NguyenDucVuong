@@ -50,9 +50,9 @@ public class Binary {
 
         Binary binary = new Binary();
 
-        System.out.print("Search index in array : " );
+        System.out.print("Search index in array : ");
         int number = sc.nextInt();
-        System.out.println(binary.binarySort(arr,0,arr.length - 1,number));
+        System.out.println(binary.binarySort(arr, 0, arr.length - 1, number));
 
         System.out.println("Sort array : ");
         binary.sortArray(arr);

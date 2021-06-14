@@ -54,6 +54,16 @@ public class ProductManager {
         } while (true);
     }
 
+    public static boolean checkID(int id) {
+        for (Product product :
+                productList) {
+            if (product.getId() == id) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static void addProduct() {
         int id = -1;
         if (productList.isEmpty()) {
@@ -80,61 +90,75 @@ public class ProductManager {
 
     public static void editProduct() {
         System.out.print("Please enter id : ");
-        int id = sc.nextInt();
-        sc.skip("\\R");
+        int id = Integer.parseInt(sc.nextLine());
         int choice = -1;
-        for (int i = 0; i < productList.size(); i++) {
-            if (id == productList.get(id).getId()) {
-                System.out.println("Please enter property edit : " +
-                        "\n 1.NameProduct" +
-                        "\n 2.Price" +
-                        "\n 3.Description" +
-                        "\n 4.Back to menu"
-                );
-                choice = Integer.parseInt(sc.nextLine());
-                switch (choice) {
-                    case 1:
-                        System.out.print("Enter new nameProduct : ");
-                        String nameProduct = sc.nextLine();
-                        productList.get(i).setNameProduct(nameProduct);
-                        break;
-                    case 2:
-                        System.out.print("Enter new price : ");
-                        double price = Double.parseDouble(sc.nextLine());
-                        productList.get(i).setPrice(price);
-                        break;
-                    case 3:
-                        System.out.println("Enter new description : ");
-                        String des = sc.nextLine();
-                        productList.get(i).setDescription(des);
-                        break;
-                    case 4:
-                        menu();
-                        break;
+        if (checkID(id)) {
+            for (int i = 0; i < productList.size(); i++) {
+                if (id == productList.get(id).getId()) {
+                    System.out.println("Please enter property edit : " +
+                            "\n 1.NameProduct" +
+                            "\n 2.Price" +
+                            "\n 3.Description" +
+                            "\n 4.Back to menu"
+                    );
+                    choice = Integer.parseInt(sc.nextLine());
+                    switch (choice) {
+                        case 1:
+                            System.out.print("Enter new nameProduct : ");
+                            String nameProduct = sc.nextLine();
+                            productList.get(i).setNameProduct(nameProduct);
+                            break;
+                        case 2:
+                            System.out.print("Enter new price : ");
+                            double price = Double.parseDouble(sc.nextLine());
+                            productList.get(i).setPrice(price);
+                            break;
+                        case 3:
+                            System.out.println("Enter new description : ");
+                            String des = sc.nextLine();
+                            productList.get(i).setDescription(des);
+                            break;
+                        case 4:
+                            menu();
+                            break;
+                    }
                 }
             }
+        } else {
+            System.out.println("Not found id!!!");
+            menu();
         }
     }
 
     public static void deleteProduct() {
         System.out.print("Enter id you need delete : ");
         int id = Integer.parseInt(sc.nextLine());
-        for (int i = 0; i < productList.size(); i++) {
-            if (id == productList.get(id).getId()) {
-                productList.remove(i);
-                break;
+        if (checkID(id)) {
+            for (int i = 0; i < productList.size(); i++) {
+                if (id == productList.get(id).getId()) {
+                    productList.remove(i);
+                    break;
+                }
             }
+        } else {
+            System.out.println("Not found id!!!");
+            menu();
         }
     }
 
     public static void searchProduct() {
         System.out.print("Enter id you need search : ");
         int id = Integer.parseInt(sc.nextLine());
-        for (int i = 0; i < productList.size(); i++) {
-            if (id == productList.get(i).getId()) {
-                System.out.println(productList.get(i).toString());
-                break;
+        if (checkID(id)) {
+            for (int i = 0; i < productList.size(); i++) {
+                if (id == productList.get(i).getId()) {
+                    System.out.println(productList.get(i).toString());
+                    break;
+                }
             }
+        } else {
+            System.out.println("Not found id!!");
+            menu();
         }
     }
 

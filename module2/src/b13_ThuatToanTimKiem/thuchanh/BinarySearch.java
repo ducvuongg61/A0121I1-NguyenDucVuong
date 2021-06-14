@@ -23,7 +23,7 @@ public class BinarySearch {
         System.out.println(binarySearch(list, 2));
         System.out.println(binarySearch(list, 70));
         System.out.println(binarySearch(list, 59));
-        System.out.println(binarySearch(list, 60)); // Tai sao la bang -1
+        System.out.println(binarySearch(list, 60));
         System.out.println(binarySearch(list, 11));
 
     }
