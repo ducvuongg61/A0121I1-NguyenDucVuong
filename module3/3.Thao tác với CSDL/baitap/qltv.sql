@@ -4,26 +4,28 @@ use QLTV;
 drop database qltv;
 
 create table books(
-	bookCode int primary key not null,
+	bookCode int primary key,
     bookName varchar(50),
     bookVendor varchar(50),
     author varchar(50),
     yearOfManufacture datetime,
     timeManufacture int,
     price float,
-    image varchar(255)
+    image varchar(255),
+    categoryCode int,
+    foreign key(categoryCode) references category(categoryCode)
 );
 
 insert into books 
 values
-(1,'người đua diều','nhã nam','khaled hosseini','1993-10-10', 3,1000,'jpg'),
-(2,'doraemon','japan','Hiroshi Fujimoto','1983-05-10', 7,2000,'png'),
-(3,'connan','hugo','Aoyama Gosho','1993-04-11', 3,3000,'raw'),
-(4,'naruto','phương nam','Aoyama Gosho','1990-02-14', 4,5000,'raw'),
-(5,'onepiece','fahasha','Aoyama ','1994-05-10', 3,1500,'jpeg');
+(1,'người đua diều','nhã nam','khaled hosseini','1993-10-10', 3,1000,'jpg',1),
+(2,'doraemon','japan','Hiroshi Fujimoto','1983-05-10', 7,2000,'png',1),
+(3,'connan','hugo','Aoyama Gosho','1993-04-11', 3,3000,'raw',2),
+(4,'naruto','phương nam','Aoyama Gosho','1990-02-14', 4,5000,'raw',3),
+(5,'onepiece','fahasha','Aoyama ','1994-05-10', 3,1500,'jpeg',4);
 
 create table students(
-	idCode int primary key not null,
+	idCode int primary key,
     nameStudent varchar(50),
     birthday datetime,
     address varchar(255),
@@ -41,9 +43,8 @@ values
 (5,'Toan', '1989-05-01','Bà Rịa Vũng Tàu', 'toan@gmail.com', '095544333', 'png');
 
 create table category(
-	categoryCode int,
-    typeBook varchar(50),
-    foreign key(categoryCode) references books(bookCode)
+	categoryCode int primary key,
+    typeBook varchar(50)
 );
 
 insert into category
