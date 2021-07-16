@@ -125,7 +125,13 @@ values
 (3,'Room',95.6,3,5,3000,3,3,'empty'),
 (4,'House',65,2,10,1560,2,3,'empty'),
 (5,'Room',50.9,2,2,9664,3,2,'full'),
-(6,'Villa',99.6,2,2,17951,3,1,'full');
+(6,'Villa',99.6,2,2,17951,3,1,'full'),
+(7,'Villa',50, 3,9,11000000,1,2,'empty'),
+(8,'Room',15,1,9,6000000,2,2,'full'),
+(9,'House',25,2,9,8000000, 2,3, 'empty'),
+(10,'Villa',38,4,9,15000000, 3,3,'full'),
+(11,'Room',21,1,9,6300000, 1, 3,'empty'),
+(12,'Room',18,2,9,3000000, 3, 1, 'empty');
 
 insert into customer_type
 values
@@ -142,7 +148,16 @@ values
 (4,2,'Viet','1950-02-11','11394403','0944334543','viet@gmail.com','Quang Tri'),
 (5,3,'Quang','1950-02-11','11391233','0944334543','quang@gmail.com','Quang Nam'),
 (6,1,'Binh','1951-03-12','11391433','094432355','binh@gmail.com','Vinh'),
-(7,3,'Vu','1992-02-16','19966442','0944334334','quang@gmail.com','Da Nang');
+(7,3,'Vu','1992-02-16','19966442','0944334334','quang@gmail.com','Da Nang'),
+(8, 1, 'An', '1989-5-28', 201132326, 0365978525, 'an@gmail.com', 'Vinh'),
+(9, 4, 'Kieu', '1865-7-21', 123456789, 0365798451, 'kieu123@gmail.com', 'Da Nang'),
+(10, 3, 'Hai', '2001-12-5', 234567891, 0657984123, 'haiqd@gmail.com', 'Da Nang'),
+(11, 3, 'Viet', '2015-10-10', 345678912, 0936421587, 'viet@gmail.com', 'Da Nang'),
+(12, 2, 'Huong', '1950-1-18', 912345678, 0978432155, 'huong@gmail.com', 'Quang Tri'),
+(13, 1, 'Toan', '1997-4-12', 865412397, 0365125487, 'taon@gmail.com', 'Quãng Ngãi'),
+(14, 2, 'Nha', '1993-7-30', 886649777, 0644458412, 'nha@gmail.com', 'Quang Tri'),
+(15, 1, 'Anh', '1993-7-30', 881554577, 0155548545, 'anh@gmail.com', 'Vinh'),
+(16, 3, 'Thuan', '1993-7-30', 699494977, 0154477845, 'thuan@gmail.com', 'Quang Tri');
 
 insert into `position`
 values
@@ -174,7 +189,15 @@ values
 (3,'Khoa',3,3,2,'1993-10-04','18565545','500','0984945612','khoa@gmail.com','Quang Tri'),
 (4,'Hoa',4,4,1,'1983-11-09','18587655','2000','0984777716','hoa@gmail.com','Da Nang'),
 (5,'Quyet',5,3,3,'1997-03-10','18589995','3000','0989997145','quyet@gmail.com','Vung Tau'),
-(6,'Vuong',6,3,2,'2000-01-06','19664588','2650','0974405695','vuong@gmail.com','Quang Tri');
+(6,'Vuong',6,3,2,'2000-01-06','19664588','2650','0974405695','vuong@gmail.com','Quang Tri'),
+(7, 'Cuong', 4, 4, 4, '1999-10-17', 201783537, 13000000, 0365797022, 'ngoccuong@gmail.com', 'Da Nang'),
+(8, 'Danh', 6, 2, 1, '1999-12-24', 20171234, 7000000, 0963578925, 'congdanh123@gmail.com', 'Ha Noi'),
+(9, 'Huy', 5, 4, 2, '2000-6-20', 201815975, 4000000, 0365794267, 'huynguyen2k@gmail.com', 'Ho Chi Minh'),
+(10, 'Huynh', 2, 1, 3, '2001-2-28', 301789653, 7500000, 0691354781, 'tam123123123@gmail.com', 'Quang Tri'),
+(11, 'Thanh', 3, 3, 1, '1999-9-26', 201713987, 30000000, 0698342111, 'thanhthao99@gmail.com', 'Da Nang'),
+(12, 'Khang', 1, 2, 2, '2000-10-25', 301632156, 8000000, 0321654988, 'anzxc123@gmail.com', 'Huế'),
+(13, 'Tam', 3, 3, 4, '2001-3-29', 301789653, 7500000, 0691354781, 'tam123123123@gmail.com', 'Quang Tri'),
+(14, 'Tien', 1, 3, 4, '2001-3-29', 301789653, 7500000, 0691354781, 'le123123123@gmail.com', 'Quang Tri');
 
 insert into attach_service
 values
@@ -194,18 +217,45 @@ values
 (6,2,7,5,'2019-03-12','2019-03-13',5000,50000),
 (7,3,3,5,'2019-12-12','2019-12-13',6000,40000),
 (8,1,7,3,'2019-04-12','2019-12-13',7000,20000),
-(9,3,5,4,'2019-01-12','2019-01-13',6111,85544);
+(9,3,5,4,'2019-01-12','2019-01-13',6111,85544),
+(10,6,16, 14, '2018-1-28', '2030-7-28', 4000, 13000),
+(11,7,15, 7, '2019-3-12', '2035-5-21', 6000, 20000),
+(12,7,11, 8, '2019-2-20', '2040-6-12', 4500, 16000),
+(13,9,10, 10, '2018-1-20', '2040-6-12', 4500, 14000),
+(14,12,12, 9, '2019-10-20', '2040-6-12', 4500, 20000),
+(15,10,9, 11, '2019-2-20', '2040-6-12', 4500, 22000),
+(16,11,7, 10, '2019-10-20', '2040-6-12', 4500, 31000),
+(17,11,8, 12, '2018-4-28', '2030-7-28', 4000, 13000),
+(18,12,6, 13, '2019-10-28', '2030-7-28', 4000, 13000),
+(19,8,14, 9, '2019-4-28', '2030-7-28', 4000, 20000),
+(20,8,13, 8, '2014-4-28', '2030-7-28', 4000, 20000),
+(21,1,1,1,'2019-12-12','2019-12-15',300,15000);
 
 
 insert into contact_detail
-values 
+values
 (1,1,1,10),
 (2,2,2,20),
 (3,3,3,30),
 (4,4,2,40),
 (5,5,4,80),
 (6,6,4,110),
-(7,1,3,50);
+(7,7,3,50),
+(8,8, 5, 100),
+(9,9, 5, 50),
+(10,10, 2, 40),
+(11,11, 3, 19),
+(12,12, 2, 5),
+(13,13, 4, 10),
+(14,14, 1, 30),
+(15,15, 5, 6),
+(16,16, 1, 6),
+(17,17, 5, 6),
+(18,18, 2, 6),
+(19,19, 4, 6),
+(20,20, 3, 6),
+(21,21,3,9);
+
 
 /*Cau2*/
 select * from employees 
@@ -303,6 +353,20 @@ inner join customer_type on customer_type.customer_type_id = customers.customer_
 where customer_type.customer_type_name = 'Diamond' and customers.customer_address in ('Vinh','Quang Ngai');
 
 /*Cau12*/
+select contact.contact_id , employees.employee_name , customers.customer_name , customers.customer_phone , services.service_name , count(contact_detail.attach_service_id) as amount from contact
+inner join contact_detail on contact_detail.contact_id = contact.contact_id
+inner join attach_service on attach_service.attach_service_id = contact_detail.attach_service_id
+inner join employees on employees.employee_id = contact.employee_id
+inner join customers on customers.customer_id = contact.customer_id
+inner join services on services.service_id = contact.service_id
+where exists ( select contact2.contact_id from contact as contact2 
+	where contact2.contact_id = contact.contact_id and contact.contact_start_date between '2019-10-01' and '2019-12-31')
+and 
+not exists ( select contact3.contact_id from contact as contact3
+	where contact3.contact_id = contact.contact_id and contact.contact_start_date between '2019-01-01' and '2019-06-30');
+
+/*Cau13*/
+
 
 
 

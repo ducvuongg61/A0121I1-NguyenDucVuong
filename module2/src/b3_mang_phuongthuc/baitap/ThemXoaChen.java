@@ -10,8 +10,8 @@ public class ThemXoaChen {
         int[] a = new int[n];
         inputArray(a, sc);
         showArray(a);
-//        insertArray(a, sc, n);
-//        deleteArray(a,sc,n);
+        insertArray(a, sc, n);
+        deleteArray(a,sc,n);
         addArray(a,sc);
     }
 

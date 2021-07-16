@@ -12,3 +12,4 @@ WHERE city = 'Nantes';
 select * from customer_views;
 
 drop view customer_view, customer_views;
+

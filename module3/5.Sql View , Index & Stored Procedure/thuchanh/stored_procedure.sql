@@ -7,7 +7,7 @@ begin
 end $$ 
 DELIMITER ; 
 
-call findAllCustomers(); /*Gọi procedure */
+call findAllCustomers(); /*Gọi procedure */	
 
 /*Câu lệnh để xóa procedure */
 DELIMITER $$
