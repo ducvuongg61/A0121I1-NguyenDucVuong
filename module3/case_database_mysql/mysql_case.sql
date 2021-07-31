@@ -366,8 +366,64 @@ not exists ( select contact3.contact_id from contact as contact3
 	where contact3.contact_id = contact.contact_id and contact.contact_start_date between '2019-01-01' and '2019-06-30');
 
 /*Cau13*/
+select * from attach_service
+inner join contact_detail on contact_detail.attach_service_id = attach_service.attach_service_id
+where contact_detail.attach_service_id is not null 
+group by contact_detail.attach_service_id 
+having count(contact_detail.attach_service_id)
+>= all ( select count(contact_detail_id) from contact_detail group by attach_service_id);
 
+/*Cau14*/
+select contact.contact_id , service_type.service_type_name , attach_service.attach_service_name , count(contact_detail.attach_service_id) as times  from contact
+inner join contact_detail on contact_detail.contact_id = contact.contact_id
+inner join services on services.service_id = contact.service_id
+inner join service_type on service_type.service_type_id = services.service_type_id
+inner join attach_service on attach_service.attach_service_id = contact_detail.attach_service_id 
+group by attach_service.attach_service_name
+having times = 1;
 
+/*Cau15*/
+select employees.employee_id , employees.employee_name , education.education_name , division.division_name , employees.employee_phone , employees.employee_address , count(contact.employee_id) as times from employees
+inner join education on education.education_id = employees.education_id
+inner join division on division.division_id = employees.division_id
+inner join contact on contact.employee_id = employees.employee_id
+where contact.contact_start_date between '2018-01-01' and '2019-12-31'
+group by employees.employee_name
+having times <= 3;
 
+/*Cau16*/
+delete from employees 
+where not exists ( select employees.employee_id from contact where (contact.contact_start_date between '2017-01-01' and '2019-12-31')
+and contact.employee_id = employees.employee_id);
+
+/*Cau17*/
+update customers
+inner join customer_type on customer_type.customer_type_id = customers.customer_type_id
+inner join contact on contact.customer_id = customers.customer_id
+set customers.customer_type_id = 1
+where(contact.contact_total_money > 50000) and (year(contact.contact_start_date) = 2019 );
+
+/*Cau18*/
+SET SQL_SAFE_UPDATES = 0;
+delete from customers
+where customer_id in ( select contact.customer_id from contact where year(contact_start_date) <= 2016 );
+SET SQL_SAFE_UPDATES = 1;
+
+/*Cau19*/
+/*update attach_service
+set attach_service.attach_service_cost = attach_service.attach_service_cost * 2
+
+select attach_service.attach_service_id , attach_service.attach_service_name , count(contact_detail.attach_service_id) as sl from contact_detail
+inner join attach_service on attach_service.attach_service_id = contact_detail.attach_service_id
+inner join contact on contact.contact_id = contact_detail.contact_id
+where  year(contact.contact_start_date) = 2019
+group by contact_detail.attach_service_id
+having sl = 3
+*/
+
+/*Cau20*/
+select e.employee_id  as id , e.employee_name as `name`, e.employee_email as email , e.employee_phone as phone , e.employee_birthday as birthday , e.employee_address as address from employees e
+union 
+select c.customer_id  as id , c.customer_name as `name` , c.customer_mail as email , c.customer_phone as phone , c.customer_birthday as birthday , c.customer_address as address  from customers c
 
 
