@@ -14,7 +14,7 @@
 <body>
 <h1>Input country to search user:</h1>
 <form action="/users?action=ctsearch" method="post">
-    <input type="text" name="ct"/>
+    <input type="text" name="ct" id="ct"/>
     <input type="submit">
     <table>
         <tr>

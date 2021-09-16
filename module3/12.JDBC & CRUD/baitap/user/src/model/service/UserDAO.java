@@ -14,6 +14,7 @@ public class UserDAO implements IUserDAO {
     public static final String DELETE_USER_ID = "DELETE FROM users where id =?;";
     public static final String UPDATE_USER = "UPDATE users SET name = ? , email = ? , country = ? where id = ?;";
     public static final String SELECT_COUNTRY = "SELECT id , name , email , country from users where country = ?;" ;
+
     private String jdbcURL = "jdbc:mysql://localhost:3306/demo1";
     private String jdbcUserName = "root";
     private String jdbcPassword = "123456";

@@ -16,6 +16,7 @@ import java.util.List;
 
 @WebServlet(name = "UserServlet", urlPatterns = "/users")
 public class UserServlet extends HttpServlet {
+
     private static final long serialVersionUID = 1L;
     private UserDAO userDAO;
 
@@ -97,6 +98,7 @@ public class UserServlet extends HttpServlet {
                     break;
                 case "sort":
                     sortByName(request, response);
+                    break;
                 default:
                     listUser(request, response);
             }
